@@ -1,5 +1,5 @@
 
-//too slow, toke more than 3 seconds from number grater than 1milion
+//too slow, took more than 3 seconds from number grater than 1milion
 
 import java.util.Scanner;
 import java.lang.Math;

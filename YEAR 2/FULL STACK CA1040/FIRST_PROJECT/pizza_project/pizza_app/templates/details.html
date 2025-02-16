@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Enter Payment Details{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pizza.css' %}">
+{% endblock %}
+{% block content %}
+<div class="create-pizza-container">
+    <h1>Enter Your Payment Details</h1>
+    <form method="POST" action="" class="create-pizza-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Submit Payment</button>
+    </form>
+    <div class="goback-link">
+        <a href="{% url 'create_pizza' %}" class="btn">Go back</a>
+    </div>
+</div>
+{% endblock %}

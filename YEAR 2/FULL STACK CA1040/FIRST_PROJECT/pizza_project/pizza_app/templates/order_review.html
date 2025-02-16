@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Review Your Order{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pizza.css' %}">
+{% endblock %}
+{% block content %}
+<div class="create-pizza-container">
+    <h1>Review Your Order</h1>
+    {% if order %}
+        <p><strong>Order ID:</strong> {{ order.id }}</p>
+        <p><strong>Order Date:</strong> {{ order.order_date }}</p>
+        <h2>Pizza Details:</h2>
+        <ul>
+            <li><strong>Size:</strong> {{ order.pizza.size.size }}</li>
+            <li><strong>Crust:</strong> {{ order.pizza.crust.crust }}</li>
+            <li><strong>Sauce:</strong> {{ order.pizza.sauce.sauce }}</li>
+            <li><strong>Cheese:</strong> {{ order.pizza.cheese.cheese }}</li>
+            <li><strong>Toppings:</strong> 
+                {% for topping in order.pizza.toppings.all %}
+                    {{ topping.topping }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+            </li>
+        </ul>
+    {% else %}
+        <p>No order found.</p>
+    {% endif %}
+    <div class="goback-link">
+        <h1>Do you want to finalize the order?</h1>
+        <a href="{% url 'order_time' %}" class="btn">CONFIRM ORDER</a>
+        <form method="POST" action="{% url 'cancel_order' %}" class="cancel-order-form" onsubmit="return confirm('Are you sure you want to cancel the order?');">
+            {% csrf_token %}
+            <button type="submit" class="btn-red">CANCEL ORDER</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block extra_js %}
+<script>
+    document.getElementById('back-button').addEventListener('click', function() {
+        if (confirm('Are you sure you want to go back? This will cancel your order.')) {
+            fetch("{% url 'cancel_order' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({})
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = "{% url 'dashboard' %}";
+                } else {
+                    alert('Failed to cancel the order.');
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

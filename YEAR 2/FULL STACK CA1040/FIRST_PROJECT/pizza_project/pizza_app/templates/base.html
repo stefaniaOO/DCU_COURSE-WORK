@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>{% block title %}Pizza App{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav class="{% if request.path == '/my_login' or request.path == '/register' %}vertical-nav{% endif %}">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
+        </div>
+        <ul>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'dashboard' %}">MyPage</a></li>
+                <li><a href="{% url 'create_pizza' %}">Create Pizza</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'user_logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'my_login' %}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Caveat:wght@600&family=Delicious+Handrawn&family=Edu+TAS+Beginner:wght@500&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Shadows+Into+Light&display=swap');
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-container h1 {
+  color: #B60609;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.dashboard-container h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-with-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-with-button .btn {
+  margin-right: 15px;
+  background-color: #008080; /* Teal */
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.header-with-button .btn:hover {
+  background-color: #36454F; /* Charcoal Gray */
+}
+
+.order {
+  background-color: #11760F; /* Lighter blue */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.order p {
+  margin: 5px 0;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.order ul {
+  list-style-type: none;
+  padding: 0;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.order ul li {
+  margin-bottom: 5px;
+}
+
+.order hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+

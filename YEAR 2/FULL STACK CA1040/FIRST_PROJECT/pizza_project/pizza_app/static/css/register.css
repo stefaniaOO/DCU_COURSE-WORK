@@ -1,0 +1,114 @@
+/* Add this to register.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(../images/paper.jpg) no-repeat center center/cover;
+  background-color: #F5E6CA;
+  margin: 0;
+}
+
+.vertical-nav {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  height: 75%;
+  width: 200px;
+  background-color: #11760F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-nav ul li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.vertical-nav ul li a {
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.vertical-nav ul li a:hover {
+  background-color: #4cbb17;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.vertical-nav .logo {
+  margin-top: 20px; /* Add margin-top to create space above the logo */
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+
+
+
+.register-container {
+  margin-left: 100px; /* Adjust this value based on the width of the vertical navbar */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Increase the max-width to make the container larger */
+  width: 100%;
+  padding: 60px; /* Increase the padding to add more space inside the container */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  /* Increase the height to ensure it accommodates all content */
+}
+
+.register-header {
+  margin-bottom: 20px; /* Increase the margin-bottom to add more space below the header */
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #D3B168;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #E25414;
+}

@@ -1,0 +1,153 @@
+/* Add this to pizza.css */
+
+body {
+  background-color: #F5E6CA; /* Light beige background */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.create-pizza-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh; /* Ensure it accommodates all content */
+  margin: 40px auto; /* Center the container and add space above and below */
+  
+}
+
+.create-pizza-container h1 {
+  color: #B60609;
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.create-pizza-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group label {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.toppings-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.toppings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.topping-item {
+  width: 45%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.create-pizza-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #D3B168;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.create-pizza-form button:hover {
+  background-color: #E25414;
+}
+
+.goback-link {
+  margin-top: 20px;
+}
+
+.goback-link h2 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.goback-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #11760F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.goback-link a:hover {
+  background-color: #4cbb17;
+}
+
+.btn-red {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E74C3C; /* Red */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-red:hover {
+  background-color: #C0392B; /* Darker red */
+}
+

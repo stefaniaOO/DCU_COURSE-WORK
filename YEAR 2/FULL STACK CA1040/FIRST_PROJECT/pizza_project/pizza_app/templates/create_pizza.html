@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Create Pizza{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pizza.css' %}">
+{% endblock %}
+{% block content %}
+<div class="create-pizza-container">
+    <h1>Create Your Pizza</h1>
+    <form method="POST" action="" class="create-pizza-form">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.size.label_tag }}
+            {{ form.size }}
+        </div>
+        <div class="form-group">
+            {{ form.crust.label_tag }}
+            {{ form.crust }}
+        </div>
+        <div class="form-group">
+            {{ form.sauce.label_tag }}
+            {{ form.sauce }}
+        </div>
+        <div class="form-group">
+            {{ form.cheese.label_tag }}
+            {{ form.cheese }}
+        </div>
+        <div class="form-group toppings-group">
+            {{ form.toppings.label_tag }}
+            <div class="toppings-container">
+                {% for topping in form.toppings %}
+                    <div class="topping-item">
+                        {{ topping }}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <button type="submit" class="btn">Create Pizza</button>
+    </form>
+</div>
+{% endblock %}

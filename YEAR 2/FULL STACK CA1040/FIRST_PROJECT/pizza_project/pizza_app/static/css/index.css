@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Caveat:wght@600&family=Delicious+Handrawn&family=Edu+TAS+Beginner:wght@500&family=Pacifico&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Caveat:wght@600&family=Delicious+Handrawn&family=Edu+TAS+Beginner:wght@500&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Shadows+Into+Light&display=swap');
+
+.page-header {
+  width: 100%;
+  background-color: #4cbb17;
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Ensure the header is above other elements */
+}
+
+.header-content {
+  text-align: center;
+}
+
+.header-content h1 {
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.slogan {
+  font-family: "Permanent Marker", serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.header-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 20px; 
+}
+
+.rotating-pizza {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 20px auto; /* Center align and add margin below */
+  display: block;
+}
+
+.order-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Ensure the order section is above the rotating pizza */
+}
+
+.order-section h2 {
+  font-size: 2.5em;
+  color: #D35400;
+}
+
+.order-section p {
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px 0;
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.order-content {
+  text-align: center;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 30px; /* Increase padding for a bigger button */
+  background-color: #D3B168;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px; /* Increase border-radius for a rounder button */
+  font-weight: bold;
+  font-size: 1.2em; /* Increase font size */
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #E25414;
+}
+
+.popular-content h1{
+  font-size: 2.5em;
+  color: #11760F;
+  text-align: center;
+  position: relative;
+  padding-top: 50px;
+  font-family: "Rock Salt", serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+.popular-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+
+.popular-item {
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.popular-item img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-p {
+  display: inline-block;
+  padding: 15px 30px; 
+  background-color: #11760F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px; 
+  font-weight: bold;
+  font-size: 1.2em; 
+  margin-top: 20px;
+ 
+}
+
+.btn-p:hover {
+  background-color: #4cbb17;
+}
+
+
+
+
+.login-container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 20px;
+}
+
+.login-logo {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #D3B168;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #E25414;
+}
+
+.register-link {
+  margin-top: 20px;
+}
+
+.register-link h2 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.register-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #11760F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  background-color: #4cbb17;
+}

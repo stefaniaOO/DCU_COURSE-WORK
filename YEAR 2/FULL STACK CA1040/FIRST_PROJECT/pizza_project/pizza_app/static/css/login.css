@@ -1,0 +1,134 @@
+/* Add this to login.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(../images/paper.jpg) no-repeat center center/cover;
+  background-color: #F5E6CA;
+  margin: 0;
+}
+
+.vertical-nav {
+  position: fixed;
+  top: 20;
+  left: 0;
+  height: 75%;
+  width: 200px;
+  background-color: #11760F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical-nav ul li {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.vertical-nav ul li a {
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.vertical-nav ul li a:hover {
+  background-color: #4cbb17;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+.vertical-nav .logo {
+  margin-top: 20px; /* Add margin-top to create space above the logo */
+  max-width: 150px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.login-container {
+  margin-left: 220px; /* Adjust this value based on the width of the vertical navbar */
+
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60vh; /* Full height to center vertically */
+}
+
+.login-header {
+  margin-bottom: 5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #D3B168;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #E25414;
+}
+
+.register-link {
+  margin-top: 20px;
+}
+
+.register-link h2 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.register-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #11760F;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  background-color: #4cbb17;
+}

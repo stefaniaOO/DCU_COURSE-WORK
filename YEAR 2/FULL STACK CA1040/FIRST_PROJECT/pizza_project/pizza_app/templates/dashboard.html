@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+  <h1>Welcome back {{ user.username }}!</h1>
+
+  {% if user.is_authenticated %}
+  <div class="header-with-button">
+    <a href="{% url 'create_pizza' %}" class="btn">Create Pizza</a>
+    <h2>Here are your Previous orders:</h2>
+  </div>
+
+    {% if PizzaOrders %}
+      {% for order in PizzaOrders|slice:":10" %}
+        {% if user.username == order.user.username %}
+          <div class="order">
+            <p><strong>USERNAME:</strong> {{ order.user.username }}</p>
+            <p><strong>DATE ORDERED:</strong> {{ order.order_date }}</p>
+            <p><strong>PIZZA:</strong></p>
+            <ul>
+              <li><strong>SIZE:</strong> {{ order.pizza.size.size }}</li>
+              <li><strong>CRUST:</strong> {{ order.pizza.crust.crust }}</li>
+              <li><strong>SAUCE:</strong> {{ order.pizza.sauce.sauce }}</li>
+              <li><strong>CHEESE:</strong> {{ order.pizza.cheese.cheese }}</li>
+              <li><strong>TOPPINGS:</strong> 
+                {% for topping in order.pizza.toppings.all %}
+                  {{ topping.topping }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+              </li>
+            </ul>
+          </div>
+          <hr>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <p>No previous orders found.</p>
+    {% endif %}
+  {% endif %}
+</div>
+{% endblock %}

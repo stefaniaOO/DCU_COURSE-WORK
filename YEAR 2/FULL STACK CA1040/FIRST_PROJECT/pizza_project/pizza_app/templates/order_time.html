@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Order Time{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/order_time.css' %}">
+{% endblock %}
+{% block content %}
+<div class="order-time-container">
+    <h1>Thank you for your order!</h1>
+    <p>Your pizza is being prepared. It will be delivered in 20 minutes.</p>
+    <div class="goback-link">
+      <a href="{% url 'dashboard' %}" class="btn">HOME</a>
+    </div>
+</div>
+
+{% endblock %}
